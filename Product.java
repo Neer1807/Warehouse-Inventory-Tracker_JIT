@@ -53,4 +53,21 @@ public class Product {
     {
         this.productThreshold=productThreshold;
     }
+
+    // increase and decrease stock 
+    public void increaseStock (int amount)
+    {
+        productQuantity += amount;
+    }
+
+    public boolean decreaseStock(int amount)
+    {
+        if(amount>productQuantity)
+        {
+            System.out.println("not enough stock to fulfill order!");
+            return false;
+        }
+        productQuantity -= amount;
+        return true;
+    }
 }
