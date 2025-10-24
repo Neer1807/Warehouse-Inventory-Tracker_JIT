@@ -70,4 +70,9 @@ public class Product {
         productQuantity -= amount;
         return true;
     }
+    @Override
+    public String toString()
+    {
+        return productId+","+productName+","+productQuantity+","+productThreshold;
+    }
 }

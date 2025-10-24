@@ -10,7 +10,7 @@ public class Warehouse {
     }
 
     //add product 
-    public void addProduct(String id,String name, int quantity,int threshold)
+    public synchronized void addProduct(String id,String name, int quantity,int threshold)
     {
         if(products.containsKey(id))
         {
@@ -23,7 +23,7 @@ public class Warehouse {
         System.out.println("Adding product with ID -> '" + id + "'");
     }
     // recieve shipment
-    public void receiveShipment (String id , int quantity) {
+    public synchronized void receiveShipment (String id , int quantity) {
         Product p= products.get(id);
         if(p== null)
         {
@@ -34,7 +34,7 @@ public class Warehouse {
         System.out.println("shipment received! New Stock "+ p.getProductQauntity());
     }
      // order 
-     public void fulfillOrder(String id,int quantity)
+     public synchronized void fulfillOrder(String id,int quantity)
      {
         Product p = products.get(id);
         if(p == null)
