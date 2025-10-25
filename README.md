@@ -11,8 +11,7 @@ This console-based app allows you to manage products, receive shipments, fulfill
 ✅ *Add New Products Dynamically*  
 ✅ *Event-Based Low Stock Alerts (Observer Pattern)*  
 ✅ *Thread-Safe Operations (Multithreading)*  
-✅ **Persistent Storage (Saved in inventory.txt)**  
-✅ *Timestamp Logging for Every Action*  
+✅ **Persistent Storage (Saved in inventory.txt)**   
 ✅ *Menu-Driven Console Interface with Exit Option*
 
 ---
